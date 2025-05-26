@@ -1,13 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Nav from "./nav/Nav.js"
+import Nav from "./nav/Nav.js";
+import About from "./pages/about/About";
+import Projects from "./pages/projects/Projects";
+import Contact from "./pages/contact/Contact";
 
 const App = () => {
   return(
     <Router>
       <Nav />
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </Router>
   );
-}
+};
 
 export default App;
