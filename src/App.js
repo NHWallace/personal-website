@@ -4,15 +4,16 @@ import Nav from "./nav/Nav.js";
 import About from "./pages/about/About";
 import Projects from "./pages/projects/Projects";
 import Contact from "./pages/contact/Contact";
+import "./styles/app.css"
 
 const App = () => {
   return(
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={About} />
+        <Route path="/projects" element={Projects} />
+        <Route path="/contact" element={Contact} />
       </Routes>
     </Router>
   );

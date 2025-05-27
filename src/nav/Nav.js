@@ -10,12 +10,12 @@ import projectsIcon from "../assets/coding.svg";
 export default function Nav() {
     const location = useLocation();
     const getNavPositionClass = () =>{
-        switch(location.pathName) {
+        switch(location.pathname) {
             case "/":
                 return "nav-about";
-            case "/":
+            case "/projects":
                 return "nav-projects";
-            case "/":
+            case "/contact":
                 return "nav-contact";
             default:
                 return "";
@@ -23,12 +23,12 @@ export default function Nav() {
     };
 
     const getPageTitle = () =>{
-        switch(location.pathName) {
+        switch(location.pathname) {
             case "/":
                 return "ABOUT";
-            case "/":
+            case "/projects":
                 return "PROJECTS";
-            case "/":
+            case "/contact":
                 return "CONTACT";
             default:
                 return "";
