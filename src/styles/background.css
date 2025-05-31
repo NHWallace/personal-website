@@ -1,0 +1,27 @@
+#bg {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5; /* Places background behind other elements*/
+}
+
+/* Dims background by placing a shadow over it */
+.shadow-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -4;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile settings */
+@media (max-width: 1100px) {
+    .shadow-overlay {
+        background-color: rgba(0, 0, 0, 0.7)
+    }
+}
